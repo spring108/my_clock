@@ -69,7 +69,7 @@ body {
   background: #000000;
 }
 
-        </style>
+</style>
 
 
 
@@ -94,7 +94,7 @@ function displayCanvas(){
 	
     //Рисуем контур часов
     contextHTML.strokeStyle =  "#ffffff";
-    contextHTML.lineWidth = 1;
+    contextHTML.lineWidth = 2;
     contextHTML.beginPath();
     contextHTML.arc(xCenterClock, yCenterClock, radiusClock, 0, 2*Math.PI, true);
     contextHTML.moveTo(xCenterClock, yCenterClock);
@@ -117,7 +117,7 @@ function displayCanvas(){
     //Оцифровка циферблата часов
     for(var th = 1; th <= 12; th++){
 	contextHTML.beginPath();
-	contextHTML.font = 'bold 25px sans-serif';
+	contextHTML.font = 'bold 40px sans-serif';
 	var xText = xCenterClock + (radiusNum - 30) * Math.cos(-30*th*(Math.PI/180) + Math.PI/2);
 	var yText = yCenterClock - (radiusNum - 30) * Math.sin(-30*th*(Math.PI/180) + Math.PI/2);
 	if(th <= 9){
@@ -142,6 +142,7 @@ function displayCanvas(){
     //Рисуем секунды
     contextHTML.beginPath();
     contextHTML.strokeStyle =  "#FF0000";
+    contextHTML.lineWidth = 3;
     contextHTML.moveTo(xCenterClock, yCenterClock);
     contextHTML.lineTo(xCenterClock + lengthSeconds*Math.cos(Math.PI/2 - t_sec*(Math.PI/180)),
 				yCenterClock - lengthSeconds*Math.sin(Math.PI/2 - t_sec*(Math.PI/180)));
@@ -151,7 +152,7 @@ function displayCanvas(){
     //Рисуем минуты
     contextHTML.beginPath();
     contextHTML.strokeStyle =  "#ffffff";
-    contextHTML.lineWidth = 3;
+    contextHTML.lineWidth = 6;
     contextHTML.moveTo(xCenterClock, yCenterClock);
     contextHTML.lineTo(xCenterClock + lengthMinutes*Math.cos(Math.PI/2 - t_min*(Math.PI/180)),
 				 yCenterClock - lengthMinutes*Math.sin(Math.PI/2 - t_min*(Math.PI/180)));
@@ -160,7 +161,7 @@ function displayCanvas(){
 
     //Рисуем часы
     contextHTML.beginPath();
-    contextHTML.lineWidth = 5;
+    contextHTML.lineWidth = 10;
     contextHTML.moveTo(xCenterClock, yCenterClock);
     contextHTML.lineTo(xCenterClock + lengthHour*Math.cos(Math.PI/2 - t_hour*(Math.PI/180)),
 				 yCenterClock - lengthHour*Math.sin(Math.PI/2 - t_hour*(Math.PI/180)));
@@ -218,7 +219,7 @@ window.setInterval(
 
 
     <body>
-        <table width="100%" height="100%">
+        <table width="100%" height="100%" BORDER=0 CELLSPACING=0 CELLPADDING=0>
             <tr>
                 <td colspan="2" align="center">
 
@@ -229,7 +230,7 @@ window.setInterval(
             <tr>
                 <td>
 
-                    <canvas height='480' width='480' id='myCanvas'></canvas>
+                    <canvas height='520' width='520' id='myCanvas'></canvas>
 
                 </td>
                 <td>
