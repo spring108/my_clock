@@ -5,79 +5,19 @@
 
 
 <style>
-
-
-/*TOP ANALOG CLOCK*/
-
-
-
-
-
-/*BOTTOM DIGITAL CLOCK*/
-.clock {
-  /*position: absolute;*/
-  top: 50%;
-  width: 99%;
-  margin: -60px auto 0 auto;
-  font-size: 60px;
-  font-family: Verdana, Arial, Sans-serif;
-  text-align: center;
-  color: #fff;
-}
-.clock ul {
-  margin: 0 auto;
-  list-style: none;
-}
-.clock ul li {
-  display: inline;
-}
-.clock ul li#separator {
-  -moz-animation: myfade 1s ease infinite;
-  -webkit-animation: myfade 1s ease infinite;
-}
-
-/* Animation */
-@-webkit-keyframes myfade {
-  0% {
-    opacity: 1.0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1.0;
-  }   
-}
-
-@-moz-keyframes myfade {
-  0% {
-    opacity: 1.0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1.0;
-  };
-}
-
-
 html {
   height: 100%;
-}
+  }
 body {
   background: #000000;
-}
-
+  }
 </style>
 
 
 
 
 <script>
-
-
-/*TOP ANALOG CLOCK*/
+/*ANALOG CLOCK*/
 function two(x) {
   return x < 10 ? '0' + x : x;
   }
@@ -208,10 +148,7 @@ window.onload = function() {
 </script>
 
 
-    </head>
-
-
-
+</head>
 
 
 
@@ -227,7 +164,7 @@ window.onload = function() {
             <tr height="*">
                 <td align="center">
 
-                    <canvas height='560' width='560' id='myCanvas'></canvas>
+                    <canvas height='520' width='520' id='myCanvas'></canvas>
 
                 </td>
                 <td>
