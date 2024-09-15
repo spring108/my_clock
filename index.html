@@ -19,6 +19,9 @@ div.cal {
   font-family: "Calibri";
   font-size: 45px;
   }
+div.dd {
+  font-size: 80px;
+  }
 </style>
 
 
@@ -179,13 +182,13 @@ function getMapMonth(m) {
 
 function getMapWW(w) {
   switch (w) {
+    case  0: return 'воскресенье';
     case  1: return 'понедельник';
     case  2: return 'вторник';
     case  3: return 'среда';
     case  4: return 'четверг';
     case  5: return 'пятница';
     case  6: return 'суббота';
-    case  7: return 'воскресенье';
     }
   }
 </script>
@@ -212,10 +215,9 @@ function getMapWW(w) {
                 </td>
                 <td align="center">
                   <div class="cal">
+                    <div class="ww" id="vww">1суббота</div>
                     <div class="dd" id="vdd">1</div>
                     <div class="mm" id="vmm">1сентября</div>
-                    &nbsp;<br>
-                    <div class="ww" id="vww">1суббота</div>
                   </div>
                 </td>
             </tr>
