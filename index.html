@@ -19,8 +19,22 @@ div.cal {
   font-family: "Calibri";
   font-size: 45px;
   }
+div.ww {
+  font-size: 60px;
+  }
 div.dd {
-  font-size: 80px;
+  font-size: 90px;
+  }
+
+#ww_4771e30d46017 .current-conditions svg {
+  height: 90px !important;
+  width: 90px !important;
+  }
+div.current-temp {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  font-size: 75px !important;
   }
 </style>
 
@@ -156,10 +170,9 @@ window.onload = function() {
   vdd.innerText = d.getDate();
   vmm.innerText = getMapMonth(d.getMonth());
   vww.innerText = getMapWW(d.getDay());
-
-  setInterval(function() {
+  setTimeout(function() {
     window.location.reload();
-    }, 60 * 60 * 1000);
+    }, 30 * 60 * 1000);
   }
 
 
@@ -218,6 +231,7 @@ function getMapWW(w) {
                     <div class="ww" id="vww">1суббота</div>
                     <div class="dd" id="vdd">1</div>
                     <div class="mm" id="vmm">1сентября</div>
+                    <br>&nbsp;
                   </div>
                 </td>
             </tr>
