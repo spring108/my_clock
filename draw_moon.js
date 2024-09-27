@@ -2,7 +2,7 @@
  � 2017
  made for http://www.abc2home.ru/
 */
-var di=0, RL = 125,  fdelay=750; //fdelay=2750;
+var di=0, RL = 125,  fdelay=2000; //fdelay=2750;
 
 var can = function () {
 var canvas;
