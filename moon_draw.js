@@ -6,6 +6,11 @@ var can = function () {
 	var ctx;
 	return {
 		draw: function () {
+
+			var d = new Date();
+			var boolNight = d.getHours() >= 22 || d.getHours() <= 7;
+		  
+
 			var imageObj = new Image();
 			imageObj.src = "full_moon.png";
 			var imageObjRF = new Image();
@@ -26,9 +31,10 @@ var can = function () {
 			ctx.beginPath();
 			ctx.drawImage(imageObj,0, 0, 2*RL, 2*RL);
 			//ctx.fillStyle = "rgba(255,255,100,0.25)";
-
 			//ctx.arc(100, 100, RL, startAngle, endAngle, true);
-			ctx.fill();
+
+
+			//ctx.fill();
 			//ctx.fillStyle = "rgba(0,50,150,0.25)";
 			ctx.fillStyle = "rgba(0,0,0,0.5)";
 			ctx.beginPath();
@@ -65,6 +71,12 @@ var can = function () {
 				};
 
 			di=di+dti;
+
+			if (boolNight) {
+				ctx.fillStyle = "rgba(0,0,0,0.85)";
+				ctx.fillRect(0, 0, 1000, 1000);
+				}
+
 			},
 			
 		init: function () {
